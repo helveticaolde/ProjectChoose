@@ -12,7 +12,7 @@ struct PChoose {
     var range = Constants.maxRange
     var round = 1
     var history: [Double] = [Double(Constants.maxRange)] // Fix this // maybe only use doubles?
-    var graphHistory: [Double] = [Double(Constants.maxRange)]
+    var graphHistory: [Double] = [Double(Constants.maxRange), 1]
     var finished = false // make sure to use this
     var isTimerRunning = false
 
@@ -26,15 +26,15 @@ struct PChoose {
     }
     
     mutating func updateGraphHistory() {
-        graphHistory.removeAll()
-        graphHistory.append(contentsOf: history)
+        graphHistory = history
     }
     
     mutating func restart() {
         round = 1
         range = Constants.maxRange
         history = [Double(Constants.maxRange)]
-        updateGraphHistory()
+//        updateGraphHistory()
+        graphHistory = [Double(Constants.maxRange), 1]
         finished = false
     }
     

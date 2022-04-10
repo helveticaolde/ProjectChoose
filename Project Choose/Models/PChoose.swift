@@ -20,13 +20,13 @@ struct PChoose {
         round += 1
         range = Int.random(in: 1...(range-1))
         history.append(Double(range))
-        if (range == 1) {
-            finished = true
-        }
     }
     
     mutating func updateGraphHistory() {
         graphHistory = history
+        if (range == 1) {
+            finished = true
+        }
     }
     
     mutating func restart() {

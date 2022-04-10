@@ -53,12 +53,24 @@ struct ContentView: View {
             
             VStack {
                 Spacer()
-                if (!pchoose.finished && !pchoose.isTimerRunning) {
+//                if (!pchoose.finished && !pchoose.isTimerRunning) {
+                if (!pchoose.isTimerRunning) {
                     HitMeButton(pchoose: $pchoose, instructionsVisible: $instructionsVisible)
                 }
+//                else if (pchoose.finished) {
+//                    FinishedView()
+//                        .transition(.opacity)
+//                }
             }
         }
         
+    }
+}
+
+struct FinishedView: View {
+    
+    var body: some View {
+        HelperText(text: "game over")
     }
 }
 
@@ -101,14 +113,20 @@ struct HitMeButton: View {
                     instructionsVisible = false
                 }
             }
-            pchoose.startNewRound()
+            if (!pchoose.finished) {
+                pchoose.startNewRound()
+            }
         }) {
             HStack {
                 if (instructionsVisible) {
                     HelperText(text: "tap to play")
                         .padding(.horizontal, 10.0)
                 }
-                ButtonText(systemName: "chevron.forward")
+                if (!pchoose.finished) {
+                    ButtonText(systemName: "chevron.forward")
+                } else {
+                    HelperText(text: "game over")
+                }
             }
             .padding()
             .frame(maxWidth: .infinity)

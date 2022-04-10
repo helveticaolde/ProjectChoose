@@ -115,7 +115,7 @@ extension ChartView {
     }
     
     private var verticalDivider: some View {
-        Divider().frame(width: 0.6).opacity(0).background(Color("DividerColor"))
+        Divider().frame(width: 0.5).opacity(0).background(Color("DividerColor"))
     }
     
     private var chartBackground: some View {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F234FCEF27F04DBB0098BA6B /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234FCEE27F04DBB0098BA6B /* GraphView.swift */; };
 		F23E964227FAD59D00C80E87 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23E963527FAD59D00C80E87 /* Roboto-Medium.ttf */; };
 		F23E964327FAD59D00C80E87 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23E963627FAD59D00C80E87 /* Roboto-Light.ttf */; };
 		F23E964427FAD59D00C80E87 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23E963727FAD59D00C80E87 /* Roboto-Regular.ttf */; };
@@ -21,7 +20,6 @@
 		F23E964D27FAD59D00C80E87 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23E964027FAD59D00C80E87 /* Roboto-Thin.ttf */; };
 		F23E964E27FAD59D00C80E87 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23E964127FAD59D00C80E87 /* Roboto-Black.ttf */; };
 		F262269527F11ABE0068FC3A /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = F262269427F11ABE0068FC3A /* SwiftUICharts */; };
-		F26226CF27F13FED0068FC3A /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26226CE27F13FED0068FC3A /* TestGraphView.swift */; };
 		F27C210A27EC76F000447458 /* Project_ChooseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C210927EC76F000447458 /* Project_ChooseTests.swift */; };
 		F288C3AF27D999BC0082C9F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288C3AE27D999BC0082C9F1 /* Constants.swift */; };
 		F288C3B127D99A870082C9F1 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288C3B027D99A870082C9F1 /* TextViews.swift */; };
@@ -86,7 +84,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F234FCEE27F04DBB0098BA6B /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F23E963527FAD59D00C80E87 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		F23E963627FAD59D00C80E87 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		F23E963727FAD59D00C80E87 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		F23E963F27FAD59D00C80E87 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		F23E964027FAD59D00C80E87 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		F23E964127FAD59D00C80E87 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		F26226CE27F13FED0068FC3A /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
 		F27C210727EC76F000447458 /* Project ChooseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project ChooseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27C210927EC76F000447458 /* Project_ChooseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_ChooseTests.swift; sourceTree = "<group>"; };
 		F288C3AE27D999BC0082C9F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -197,8 +193,6 @@
 		F298011427F16F6B00F8C02C /* Graph */ = {
 			isa = PBXGroup;
 			children = (
-				F234FCEE27F04DBB0098BA6B /* GraphView.swift */,
-				F26226CE27F13FED0068FC3A /* TestGraphView.swift */,
 				F298011527F16F8800F8C02C /* ChartView.swift */,
 			);
 			path = Graph;
@@ -455,11 +449,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F234FCEF27F04DBB0098BA6B /* GraphView.swift in Sources */,
 				F2B8256127EC2B850071B674 /* RangeView.swift in Sources */,
 				F298011627F16F8800F8C02C /* ChartView.swift in Sources */,
 				F2D8192527D71E170008D93F /* ContentView.swift in Sources */,
-				F26226CF27F13FED0068FC3A /* TestGraphView.swift in Sources */,
 				F2D8192327D71E170008D93F /* Project_ChooseApp.swift in Sources */,
 				F2D8193527D720E00008D93F /* PChoose.swift in Sources */,
 				F288C3B127D99A870082C9F1 /* TextViews.swift in Sources */,

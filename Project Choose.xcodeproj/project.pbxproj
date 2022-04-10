@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F22B9FE227E9DB1600BCFD95 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B9FE127E9DB1600BCFD95 /* TimerView.swift */; };
 		F234FCEF27F04DBB0098BA6B /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234FCEE27F04DBB0098BA6B /* GraphView.swift */; };
 		F23E964227FAD59D00C80E87 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23E963527FAD59D00C80E87 /* Roboto-Medium.ttf */; };
 		F23E964327FAD59D00C80E87 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F23E963627FAD59D00C80E87 /* Roboto-Light.ttf */; };
@@ -87,7 +86,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F22B9FE127E9DB1600BCFD95 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		F234FCEE27F04DBB0098BA6B /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		F23E963527FAD59D00C80E87 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		F23E963627FAD59D00C80E87 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 				F298011427F16F6B00F8C02C /* Graph */,
 				F2D8192427D71E170008D93F /* ContentView.swift */,
 				F288C3B027D99A870082C9F1 /* TextViews.swift */,
-				F22B9FE127E9DB1600BCFD95 /* TimerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -458,7 +455,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F22B9FE227E9DB1600BCFD95 /* TimerView.swift in Sources */,
 				F234FCEF27F04DBB0098BA6B /* GraphView.swift in Sources */,
 				F2B8256127EC2B850071B674 /* RangeView.swift in Sources */,
 				F298011627F16F8800F8C02C /* ChartView.swift in Sources */,

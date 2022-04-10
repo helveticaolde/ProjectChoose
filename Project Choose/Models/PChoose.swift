@@ -34,7 +34,7 @@ struct PChoose {
         range = Constants.maxRange
         history = [Double(Constants.maxRange)]
 //        updateGraphHistory()
-        graphHistory = [Double(Constants.maxRange), 1]
+//        graphHistory = [Double(Constants.maxRange), 1]
         finished = false
     }
     

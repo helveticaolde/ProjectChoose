@@ -22,7 +22,10 @@ struct TextView: View {
                     
                 NumberText(text: "5000 - 1")
                     .padding(.top, -6.0)
-                ChartView(data: [5000, 4000, 3000, 719, 394, 327, 140, 56, 14, 7, 5, 2, 1])
+                ZStack {
+                    ChartView(data: [5000, 4000, 3000, 719, 394, 327, 140, 56, 14, 7, 5, 2, 1])
+                    BlockerView()
+                }
                 HStack {
                     HelperText(text: "tap to play")
                         .padding(.horizontal, 10.0)
@@ -33,6 +36,15 @@ struct TextView: View {
             }
             .padding()
         }
+    }
+}
+
+struct BlockerView: View {
+    
+    var body: some View {
+        Rectangle()
+            .foregroundColor(Color("BackgroundColor"))
+            .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height * 0.45)
     }
 }
 
@@ -106,7 +118,7 @@ struct RoundButtonText: View {
         Image(systemName: systemName)
             .font(.title.weight(.heavy))
             .foregroundColor(Color("ButtonColor"))
-            .frame(width: 56.0, height: 56.0
+            .frame(width: UIScreen.main.bounds.width * 0.15, height: UIScreen.main.bounds.width * 0.15
             )
     }
 }

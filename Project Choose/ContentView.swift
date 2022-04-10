@@ -91,12 +91,13 @@ struct InstructionsView: View {
 struct HitMeButton: View {
     @Binding var pchoose: PChoose
     @Binding var instructionsVisible: Bool
+//    @Binding var graphVisible: Bool
     
     var body: some View {
         
         Button(action: {
             if (pchoose.round == 1) {
-                withAnimation {
+                withAnimation(Animation.easeIn(duration: 0.4)) {
                     instructionsVisible = false
                 }
             }
@@ -142,7 +143,7 @@ struct ChartViewManager: View {
     var body: some View {
         ChartView(data: pchoose.graphHistory)
             .opacity(pchoose.isTimerRunning ? 0.0 : 1.0)
-            .animation(.easeInOut(duration: 0.2), value: pchoose.isTimerRunning)
+            .animation(.easeInOut(duration: 0.15), value: pchoose.isTimerRunning)
             .onChange(of: pchoose.isTimerRunning, perform: { _ in
                 if (!pchoose.isTimerRunning) {
                     pchoose.updateGraphHistory()

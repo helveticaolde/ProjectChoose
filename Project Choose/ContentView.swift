@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    // development branch change
-    
     @State private var pchoose = PChoose()
     @State private var instructionsVisible = true
     
@@ -20,16 +18,9 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                // debug view
-//                if (pchoose.round > 1) {
-//                    InstructionText(text: "range: \(pchoose.range)")
-//                    InstructionText(text: "history: \(pchoose.history[pchoose.round - 1])")
-//                }
-                // debug view
                 if (instructionsVisible) {
-                    HeadingView(pchoose: $pchoose)
+                    HeadingView()
                         .transition(.opacity)
-//                        .transition(.asymmetric(insertion: .opacity, removal: .scale))
                 } else {
                     RoundView(pchoose: $pchoose)
                         .transition(.opacity)
@@ -37,37 +28,17 @@ struct ContentView: View {
                 HStack (spacing: 0) {
                     RangeView(pchoose: $pchoose)
                     NumberText(text: " - 1")
-//                    if (!pchoose.isTimerRunning) {
-//                        NumberText(text: " - 1")
-//                            .transition(.slide)
-//                            .animation(.easeInOut(duration: 0.2), value: pchoose.isTimerRunning)
-//                    }
                 }
                 .padding(.top, -6.0)
                 
-                // to remove
-//                TimerRangeView(pchoose: $pchoose)
-                // to remove
-                
-//                ChartViewManager(pchoose: $pchoose)
-//                    .padding(.leading, -8.0)
-//                    .padding(.trailing, 4.0)
-                
                 if (instructionsVisible) {
-                    InstructionsView(pchoose: $pchoose)
+                    InstructionsView()
                         .transition(.opacity)
-//                        .transition(.asymmetric(insertion: .opacity, removal: .scale))
                 } else {
                     ChartViewManager(pchoose: $pchoose)
                         .padding(.leading, -8.0)
                         .padding(.trailing, 4.0)
-//                    ChartView(data: pchoose.historyDouble)
-//                        .opacity(pchoose.isTimerRunning ? 0 : 1)
-                    // Working graph from dependency
-    //                GraphView(list: pchoose.historyDouble)
                 }
-                
-                
                 
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
@@ -92,8 +63,6 @@ struct ContentView: View {
 }
 
 struct HeadingView: View {
-    // dont need binding?
-    @Binding var pchoose: PChoose
     
     var body: some View {
         InstructionText(text: "pick a number in range")
@@ -110,7 +79,6 @@ struct RoundView: View {
 }
 
 struct InstructionsView: View {
-    @Binding var pchoose: PChoose
     
     var body: some View {
         InstructionText(text: "each round, a number will be chosen between the previous result and 1")
@@ -132,7 +100,6 @@ struct HitMeButton: View {
                     instructionsVisible = false
                 }
             }
-//            pchoose.prepNewRound()
             pchoose.startNewRound()
         }) {
             HStack {
@@ -175,31 +142,12 @@ struct ChartViewManager: View {
     var body: some View {
         ChartView(data: pchoose.graphHistory)
             .opacity(pchoose.isTimerRunning ? 0.0 : 1.0)
-//            .opacity((pchoose.isTimerRunning || pchoose.graphHistory.count == 0) ? 0.0 : 1.0)
             .animation(.easeInOut(duration: 0.2), value: pchoose.isTimerRunning)
             .onChange(of: pchoose.isTimerRunning, perform: { _ in
                 if (!pchoose.isTimerRunning) {
                     pchoose.updateGraphHistory()
                 }
             })
-        
-//            .opacity(visibility)
-//            .onChange(of: pchoose.isTime rRunning, perform: { _ in
-//                if (visibility == 1) {
-//                    DispatchQueue.main.asyncAfter(deadline: .now()) {
-//                        withAnimation(.linear(duration: 0.2)) {
-//                            visibility = 0
-//                        }
-//                    }
-//                } else {
-//                    DispatchQueue.main.asyncAfter(deadline: .now()) {
-//                        pchoose.updateHistoryDouble()
-//                        withAnimation(.linear(duration: 0.2)) {
-//                            visibility = 1
-//                        }
-//                    }
-//                }
-//            })
     }
 }
 

@@ -96,28 +96,6 @@ struct RangeView: View {
     }
 }
 
-//struct RandomNumView: View {
-//
-//    var body: some View {
-//        NumberText(text: "\(range) and 1")
-//            .padding(.leading)
-//    }
-//}
-
-//struct RowView: View {
-//    let round: Int
-//    let range: Int
-//
-//    var body: some View {
-//        HStack {
-//            NumberText(text: "\(range) and 1")
-//                .padding(.leading)
-//            Spacer()
-//            RoundedTextView(text: String(round))
-//        }
-//    }
-//}
-
 struct RangeView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

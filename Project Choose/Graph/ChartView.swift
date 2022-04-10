@@ -23,10 +23,7 @@ struct ChartView: View {
                 HStack (spacing: 0) {
                     chartYAxis
                         .frame(width: 40)
-//                    verticalDivider
                     chartView
-//                        .background(chartBackground)
-//                    verticalDivider
                 }
                 HStack (spacing: 0) {
                     Rectangle()
@@ -56,8 +53,6 @@ extension ChartView {
     
     private var chartView: some View {
         GeometryReader { geometry in
-            
-            // Stroke Line
             ZStack {
                 // Shaded area beneath line
                 Path { path in
@@ -85,6 +80,7 @@ extension ChartView {
                 
                 chartBackground
                 
+                // Stroke Line
                 Path { path in
                     for index in data.indices {
                         
@@ -107,7 +103,6 @@ extension ChartView {
                         lineCap: .round,
                         lineJoin: .round))
                 .clipped()
-//                .shadow(color: Color("AccentColor"), radius: 10, x: 10, y: 10)
             }
             
         }
@@ -143,22 +138,18 @@ extension ChartView {
     private var chartYAxis: some View {
         VStack (alignment: .trailing) {
             AxisText(num: maxY)
-//            Text("\(maxY, specifier: "%.0f")")
             Spacer()
             let midY = (maxY + minY) / 2
             AxisText(num: midY)
-//            Text("\(midY, specifier: "%.0f")")
             Spacer()
             AxisText(num: minY)
-//            Text("\(minY, specifier: "%.0f")")
         }
     }
     
     private var chartXAxis: some View {
         HStack {
             ForEach(0..<data.count, id: \.self) { index in
-//                Text("\(index + 1)")
-                AxisText(num: Double(index + 1))
+                AxisText(num: Double(index))
                 if (index < (data.count - 1)) {
                     Spacer()
                 }

@@ -26,8 +26,6 @@
 		F27C210A27EC76F000447458 /* Project_ChooseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C210927EC76F000447458 /* Project_ChooseTests.swift */; };
 		F288C3AF27D999BC0082C9F1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288C3AE27D999BC0082C9F1 /* Constants.swift */; };
 		F288C3B127D99A870082C9F1 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288C3B027D99A870082C9F1 /* TextViews.swift */; };
-		F28E614D2801372D006E9AEA /* TimerRangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28E614C2801372D006E9AEA /* TimerRangeView.swift */; };
-		F28E614E2801372D006E9AEA /* TimerRangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28E614C2801372D006E9AEA /* TimerRangeView.swift */; };
 		F298011627F16F8800F8C02C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F298011527F16F8800F8C02C /* ChartView.swift */; };
 		F2B8256127EC2B850071B674 /* RangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B8256027EC2B850071B674 /* RangeView.swift */; };
 		F2CD02D527FA938E0020BDAF /* RobotoMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2CD02C827FA938E0020BDAF /* RobotoMono-Medium.ttf */; };
@@ -109,7 +107,6 @@
 		F27C210927EC76F000447458 /* Project_ChooseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_ChooseTests.swift; sourceTree = "<group>"; };
 		F288C3AE27D999BC0082C9F1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F288C3B027D99A870082C9F1 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
-		F28E614C2801372D006E9AEA /* TimerRangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRangeView.swift; sourceTree = "<group>"; };
 		F298011527F16F8800F8C02C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		F2B8256027EC2B850071B674 /* RangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeView.swift; sourceTree = "<group>"; };
 		F2CD02C827FA938E0020BDAF /* RobotoMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Medium.ttf"; sourceTree = "<group>"; };
@@ -195,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				F2B8256027EC2B850071B674 /* RangeView.swift */,
-				F28E614C2801372D006E9AEA /* TimerRangeView.swift */,
 			);
 			path = Range;
 			sourceTree = "<group>";
@@ -454,7 +450,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2CD02F327FA96600020BDAF /* FontsManager.swift in Sources */,
-				F28E614E2801372D006E9AEA /* TimerRangeView.swift in Sources */,
 				F27C210A27EC76F000447458 /* Project_ChooseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,7 +462,6 @@
 				F234FCEF27F04DBB0098BA6B /* GraphView.swift in Sources */,
 				F2B8256127EC2B850071B674 /* RangeView.swift in Sources */,
 				F298011627F16F8800F8C02C /* ChartView.swift in Sources */,
-				F28E614D2801372D006E9AEA /* TimerRangeView.swift in Sources */,
 				F2D8192527D71E170008D93F /* ContentView.swift in Sources */,
 				F26226CF27F13FED0068FC3A /* TestGraphView.swift in Sources */,
 				F2D8192327D71E170008D93F /* Project_ChooseApp.swift in Sources */,

@@ -1,1 +1,1 @@
-This project is an iOS app created in XCode using Swift. To run this, you must download XCode (only available on Mac). Download the 'Project Choose' forlder and open it in XCode. Press the 'play' button in the top left of the screen to run it in a simulator.
+This project is an iOS app created in XCode using Swift. To run this, you must download XCode (only available on Mac). Download the 'Project Choose' folder and open it in XCode. Press the 'play' button in the top left of the screen to run it in a simulator.

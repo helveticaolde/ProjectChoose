@@ -22,7 +22,7 @@ struct ChartView: View {
             VStack (spacing: 0) {
                 HStack (spacing: 0) {
                     chartYAxis
-                        .frame(width: 40)
+                        .frame(width: 40, height: UIScreen.main.bounds.height * 0.385)
                     chartView
                 }
                 HStack (spacing: 0) {
@@ -121,28 +121,53 @@ extension ChartView {
     private var chartBackground: some View {
         ZStack {
             HStack {
-                verticalDivider
+//                verticalDivider
+                Divider()
                 Spacer()
-                verticalDivider
+//                verticalDivider
+                Divider()
+//                ForEach(data.indices, id: \.self) { index in
+//                    verticalDivider
+//                    if (index < data.count - 1) {
+//                        Spacer()
+//                    }
+//                }
             }
             VStack {
-                horizontalDivider
-                Spacer()
-                horizontalDivider
-                Spacer()
-                horizontalDivider
+                ForEach(0..<5) { index in
+//                    horizontalDivider
+                    Divider()
+                    if (index < 4) {
+                        Spacer()
+                    }
+                }
+//                horizontalDivider
+//                Spacer()
+//                horizontalDivider
+//                Spacer()
+//                horizontalDivider
             }
         }
     }
     
     private var chartYAxis: some View {
+//        var axisNum: Double = 0
+        
         VStack (alignment: .trailing) {
-            AxisText(num: maxY)
-            Spacer()
-            let midY = (maxY + minY) / 2
-            AxisText(num: midY)
-            Spacer()
-            AxisText(num: minY)
+            ForEach(0..<5) { index in
+//                axisNum = (maxY + minY) / Double((index + 1))
+                let axisNum = (maxY/4)*(4 - Double(index))
+                AxisText(num: axisNum)
+                if (index < 4) {
+                    Spacer()
+                }
+            }
+//            AxisText(num: maxY)
+//            Spacer()
+//            let midY = (maxY + minY) / 2
+//            AxisText(num: midY)
+//            Spacer()
+//            AxisText(num: minY)
         }
     }
     
@@ -150,6 +175,7 @@ extension ChartView {
         HStack {
             ForEach(0..<data.count, id: \.self) { index in
                 AxisText(num: Double(index))
+//                    .frame(width: UIScreen.main.bounds.width * 0.04)
                 if (index < (data.count - 1)) {
                     Spacer()
                 }
@@ -161,8 +187,8 @@ extension ChartView {
 
 struct ChartView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartView(data: [5000, 4000, 3000, 719, 394, 327, 140, 56, 14, 7, 5, 2, 1])
-        ChartView(data: [5000, 4000, 3000, 719, 394, 327, 140, 56, 14, 7, 5, 2, 1])
+        ChartView(data: [5000, 4000, 719, 327, 56, 12, 1])
+        ChartView(data: [5000, 4000, 719, 327, 56, 12, 1])
             .preferredColorScheme(.dark)
     }
 }

@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State private var pchoose = PChoose()
     @State private var instructionsVisible = true
+    @State private var graphVisible = false
     
     var body: some View {
         ZStack (alignment: .top) {
@@ -35,7 +36,7 @@ struct ContentView: View {
                     InstructionsView()
                         .transition(.opacity)
                 } else {
-                    ChartViewManager(pchoose: $pchoose)
+                    ChartViewManager(pchoose: $pchoose, graphVisible: $graphVisible)
                         .padding(.leading, -8.0)
                         .padding(.trailing, 4.0)
                 }
@@ -109,7 +110,7 @@ struct HitMeButton: View {
         
         Button(action: {
             if (pchoose.round == 1) {
-                withAnimation(Animation.easeIn(duration: 0.4)) {
+                withAnimation(Animation.easeIn) {
                     instructionsVisible = false
                 }
             }
@@ -139,7 +140,7 @@ struct HitMeButton: View {
 struct RestartButton: View {
     @Binding var pchoose: PChoose
     @Binding var instructionsVisible: Bool
-
+    
     var body: some View {
         
         Button(action: {
@@ -157,17 +158,34 @@ struct RestartButton: View {
 
 struct ChartViewManager: View {
     @Binding var pchoose: PChoose
+    @Binding var graphVisible: Bool
     
     var body: some View {
         ChartView(data: pchoose.graphHistory)
-            .opacity(pchoose.isTimerRunning ? 0.0 : 1.0)
-            .animation(.easeInOut(duration: 0.15), value: pchoose.isTimerRunning)
+            .opacity(graphVisible ? 1.0 : 0.0)
+            .animation(.easeInOut(duration: 0.40), value: graphVisible)
             .onChange(of: pchoose.isTimerRunning, perform: { _ in
                 if (!pchoose.isTimerRunning) {
                     pchoose.updateGraphHistory()
                 }
+                if (pchoose.round > 0 && !pchoose.isTimerRunning) {
+                    graphVisible = true
+                } else {
+                    graphVisible = false
+                }
             })
     }
+    
+//    var body: some View {
+//        ChartView(data: pchoose.graphHistory)
+//            .opacity(pchoose.isTimerRunning ? 0.0 : 1.0)
+//            .animation(.easeInOut(duration: 0.10), value: pchoose.isTimerRunning)
+//            .onChange(of: pchoose.isTimerRunning, perform: { _ in
+//                if (!pchoose.isTimerRunning) {
+//                    pchoose.updateGraphHistory()
+//                }
+//            })
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {

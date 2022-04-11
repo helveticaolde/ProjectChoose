@@ -22,10 +22,7 @@ struct TextView: View {
                     
                 NumberText(text: "5000 - 1")
                     .padding(.top, -6.0)
-                ZStack {
-                    ChartView(data: [5000, 4000, 3000, 719, 394, 327, 140, 56, 14, 7, 5, 2, 1])
-                    BlockerView()
-                }
+                ChartView(data: [5000, 4000, 3000, 719, 394, 327, 140, 56, 14, 7, 5, 2, 1])
                 HStack {
                     HelperText(text: "tap to play")
                         .padding(.horizontal, 10.0)

@@ -5,7 +5,7 @@
 //  Created by Felix Habib on 28/3/2022.
 
 import SwiftUI
-import SwiftUICharts
+//import SwiftUICharts
 
 struct ChartView: View {
     
